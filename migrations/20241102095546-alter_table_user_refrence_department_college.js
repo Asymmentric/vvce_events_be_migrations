@@ -26,9 +26,7 @@ module.exports = {
       references: {
         table: 'colleges',
         field: 'id'
-      },
-      onDelete: 'cascade',
-      onUpdate: 'cascade'
+      }
     })
 
     await queryInterface.addConstraint('departments', {
@@ -38,9 +36,7 @@ module.exports = {
       references: {
         table: 'colleges',
         field: 'id'
-      },
-      onDelete: 'cascade',
-      onUpdate: 'cascade'
+      }
     })
 
   },

@@ -155,7 +155,8 @@ module.exports = {
      * Add reverting commands here.
      */
 
-    await queryInterface.dropTable('circulars')
+
     await queryInterface.dropTable('events')
+    await queryInterface.dropTable('circulars')
   }
 };

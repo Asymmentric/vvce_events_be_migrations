@@ -86,9 +86,7 @@ module.exports = {
       references: {
         table: 'addresses',
         field: 'id'
-      },
-      onDelete: 'cascade',
-      onUpdate: 'cascade'
+      }
     })
   },
 
@@ -99,10 +97,10 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-
-    await queryInterface.dropTable('addresses')
-    await queryInterface.dropTable('countries')
     await queryInterface.removeConstraint('colleges', 'FK_college_address')
     await queryInterface.removeConstraint('addresses', 'FK_address_country')
+    await queryInterface.dropTable('countries')
+    await queryInterface.dropTable('addresses')
+
   }
 };
